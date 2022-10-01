@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://ptqjyt335vh5"]
+
+[ext_resource type="Texture2D" uid="uid://icss10njglop" path="res://icons/kenney_gear.png" id="1_7yi6o"]
+[ext_resource type="Texture2D" uid="uid://bbwmby0rqqq5a" path="res://icons/godot_search.svg" id="1_pxghd"]
+
+[node name="Sidebar" type="PanelContainer"]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 197.0
+grow_vertical = 2
+
+[node name="Margins" type="MarginContainer" parent="."]
+layout_mode = 2
+offset_right = 233.0
+offset_bottom = 648.0
+grow_vertical = 2
+
+[node name="VerticalLayout" type="VBoxContainer" parent="Margins"]
+layout_mode = 2
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 225.0
+offset_bottom = 640.0
+grow_vertical = 2
+
+[node name="Top" type="HBoxContainer" parent="Margins/VerticalLayout"]
+layout_mode = 2
+offset_right = 217.0
+offset_bottom = 32.0
+
+[node name="SearchBarBG" type="PanelContainer" parent="Margins/VerticalLayout/Top"]
+layout_mode = 2
+offset_right = 179.0
+offset_bottom = 32.0
+size_flags_horizontal = 3
+
+[node name="SearchBar" type="LineEdit" parent="Margins/VerticalLayout/Top/SearchBarBG"]
+layout_mode = 2
+offset_right = 179.656
+offset_bottom = 32.0
+theme_override_constants/minimum_character_width = 10
+right_icon = ExtResource("1_pxghd")
+flat = true
+caret_blink = true
+caret_blink_interval = 0.5
+
+[node name="ParamButton" type="Button" parent="Margins/VerticalLayout/Top"]
+custom_minimum_size = Vector2i(30, 30)
+layout_mode = 2
+offset_left = 187.0
+offset_right = 217.0
+offset_bottom = 32.0
+icon = ExtResource("1_7yi6o")
+expand_icon = true
+
+[node name="Tree" type="Tree" parent="Margins/VerticalLayout"]
+layout_mode = 2
+offset_top = 40.0
+offset_right = 217.0
+offset_bottom = 632.0
+size_flags_vertical = 3

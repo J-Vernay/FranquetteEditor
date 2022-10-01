@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnu2xprrhd4lr"]
+
+[ext_resource type="PackedScene" uid="uid://ptqjyt335vh5" path="res://scenes/sidebar.tscn" id="1_4rsi0"]
+[ext_resource type="PackedScene" uid="uid://st146kc4v7rq" path="res://scenes/CommandBar.tscn" id="2_e7wgr"]
+
+[node name="PanelContainer" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CommandBar" parent="VBoxContainer" instance=ExtResource("2_e7wgr")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 1152.0
+offset_bottom = 131.0
+
+[node name="HSplitContainer" type="HSplitContainer" parent="VBoxContainer"]
+layout_mode = 2
+offset_top = 139.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="Sidebar" parent="VBoxContainer/HSplitContainer" instance=ExtResource("1_4rsi0")]
+layout_mode = 2
+anchors_preset = 0
+anchor_bottom = 0.0
+offset_right = 233.0
+offset_bottom = 509.0
+grow_vertical = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/HSplitContainer"]
+layout_mode = 2
+offset_left = 245.0
+offset_right = 1152.0
+offset_bottom = 509.0
+
+[node name="CodeEdit" type="CodeEdit" parent="VBoxContainer/HSplitContainer/PanelContainer"]
+layout_mode = 2
+offset_right = 907.0
+offset_bottom = 509.0
+gutters_draw_line_numbers = true
+gutters_zero_pad_line_numbers = true
+indent_use_spaces = true
+auto_brace_completion_highlight_matching = true

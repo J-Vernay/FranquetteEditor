@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://ynrgi7k3wpdu"]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+offset_right = 79.0
+offset_bottom = 31.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 83.0
+offset_bottom = 31.0
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer"]
+offset_right = 67.0
+offset_bottom = 31.0
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="HBoxContainer"]
+offset_left = 75.0
+offset_right = 83.0
+offset_bottom = 31.0
+stretch_mode = 1
+
+[node name="Button" type="Button" parent="HBoxContainer/AspectRatioContainer"]
+offset_left = -11.5
+offset_right = 19.5
+offset_bottom = 31.0
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_top = 39.0
+offset_right = 83.0
+offset_bottom = 70.0

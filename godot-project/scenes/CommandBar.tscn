@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://st146kc4v7rq"]
+
+[ext_resource type="Texture2D" uid="uid://ceql0d8bdy2rp" path="res://icons/godot_close.svg" id="1_7yfww"]
+
+[node name="CommandBar" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+use_hidden_tabs_for_min_size = true
+
+[node name="PROJECT" type="ColorRect" parent="TabContainer"]
+custom_minimum_size = Vector2i(50, 50)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+color = Color(1, 0, 1, 1)
+
+[node name="VIEW" type="ColorRect" parent="TabContainer"]
+visible = false
+custom_minimum_size = Vector2i(50, 50)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+color = Color(0.776471, 0.592157, 0.027451, 1)
+
+[node name="NAVIGATE" type="ColorRect" parent="TabContainer"]
+visible = false
+custom_minimum_size = Vector2i(50, 100)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+color = Color(0, 0.713726, 0.686275, 1)
+
+[node name="EDIT" type="ColorRect" parent="TabContainer"]
+visible = false
+custom_minimum_size = Vector2i(50, 50)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+color = Color(0.415686, 0, 0.00784314, 1)
+
+[node name="Hide" type="Button" parent="."]
+offset_left = 1128.0
+offset_top = 624.0
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+icon = ExtResource("1_7yfww")
